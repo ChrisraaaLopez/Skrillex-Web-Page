@@ -2,7 +2,6 @@
 
 .contenedor-contacto {
     max-width: 800px;
-    /* Más angosto para un formulario */
     margin: 0 auto;
     padding: 4rem 2rem;
     text-align: center;
@@ -18,11 +17,8 @@
 .formulario-contacto {
     display: flex;
     flex-direction: column;
-    /* Apila los campos verticalmente */
     gap: 1.5rem;
-    /* Espacio entre cada campo */
     text-align: left;
-    /* Alinea las etiquetas a la izquierda */
 }
 
 .campo-formulario {
@@ -40,7 +36,7 @@
 }
 
 
-/* Estilo base para inputs y textarea */
+/* Estilo base para formularios */
 
 .campo-formulario input[type="text"],
 .campo-formulario input[type="email"],
@@ -58,44 +54,33 @@
 }
 
 
-/* Estilo para el <select> */
+/* Estilo para el select */
 
 .campo-formulario select {
-    /* Apariencia para que se vea como los otros campos */
     appearance: none;
     -webkit-appearance: none;
-    /* Para Safari */
     -moz-appearance: none;
-    /* Para Firefox */
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1.5em;
     padding-right: 3rem;
-    /* Espacio para la flecha */
 }
-
-
-/* Efecto :focus (cuando se hace clic) */
 
 .campo-formulario input[type="text"]:focus,
 .campo-formulario input[type="email"]:focus,
 .campo-formulario select:focus,
 .campo-formulario textarea:focus {
     outline: none;
-    /* Quita el borde azul feo del navegador */
     border-color: var(--color-accent);
-    /* Borde rojo */
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    /* Sombra roja */
 }
 
 
-/* Botón de envío */
+/* Botón para enviar formulario */
 
 .formulario-contacto .boton-primario {
     width: 100%;
-    /* El botón ocupa todo el ancho */
     margin-top: 1rem;
     font-size: 1.2rem;
     padding: 1rem;
