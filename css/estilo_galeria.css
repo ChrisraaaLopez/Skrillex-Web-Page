@@ -1,0 +1,79 @@
+/* ======== ESTILOS DE LA PÁGINA DE GALERÍA ======== */
+
+.contenedor-galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+
+/* El h2 ya tiene estilos globales, pero podemos centrarlo */
+
+.contenedor-galeria h2 {
+    display: inline-block;
+    /* Para que el borde inferior no ocupe todo */
+}
+
+.subtitulo-galeria {
+    font-size: 1.2rem;
+    color: var(--color-grey);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+
+/* ======== EL GRID RESPONSIVO ======== */
+
+.grid-galeria {
+    display: grid;
+    /* Grid Responsivo:
+      - Columnas de 1fr (fracción)
+      - auto-fit: Crea tantas columnas como quepan.
+      - minmax(300px, 1fr): Cada columna debe medir MÍNIMO 300px.
+        Si la pantalla es más pequeña, se van "cayendo" a la siguiente fila.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    /* Espacio entre las imágenes */
+}
+
+.item-galeria {
+    background-color: #000;
+    /* Fondo negro por si las imágenes tardan en cargar */
+    border: 2px solid var(--color-grey);
+    overflow: hidden;
+    /* Para que la imagen no se salga */
+    transition: all 0.3s ease;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin deformarse */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+
+/* ======== EFECTO HOVER (Zoom) ======== */
+
+.item-galeria:hover {
+    border-color: var(--color-accent);
+    /* Borde rojo al pasar el mouse */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    /* Sombra roja */
+}
+
+.item-galeria:hover img {
+    transform: scale(1.1);
+    /* Efecto de zoom a la imagen */
+}
+
+
+/* No necesitamos media queries explícitas para el grid
+   porque 'auto-fit' y 'minmax' lo hacen automáticamente.
+   
+   ¡Esa es la magia del grid moderno!
+*/

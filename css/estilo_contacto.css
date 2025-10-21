@@ -1,0 +1,103 @@
+/* ======== ESTILOS DE LA PÁGINA DE CONTACTO ======== */
+
+.contenedor-contacto {
+    max-width: 800px;
+    /* Más angosto para un formulario */
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.subtitulo-contacto {
+    font-size: 1.2rem;
+    color: var(--color-grey);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    /* Apila los campos verticalmente */
+    gap: 1.5rem;
+    /* Espacio entre cada campo */
+    text-align: left;
+    /* Alinea las etiquetas a la izquierda */
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-formulario label {
+    font-family: var(--font-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--color-grey);
+    margin-bottom: 0.5rem;
+}
+
+
+/* Estilo base para inputs y textarea */
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="email"],
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-grey);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    /* Hereda la fuente */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+/* Estilo para el <select> */
+
+.campo-formulario select {
+    /* Apariencia para que se vea como los otros campos */
+    appearance: none;
+    -webkit-appearance: none;
+    /* Para Safari */
+    -moz-appearance: none;
+    /* Para Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5em;
+    padding-right: 3rem;
+    /* Espacio para la flecha */
+}
+
+
+/* Efecto :focus (cuando se hace clic) */
+
+.campo-formulario input[type="text"]:focus,
+.campo-formulario input[type="email"]:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: none;
+    /* Quita el borde azul feo del navegador */
+    border-color: var(--color-accent);
+    /* Borde rojo */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    /* Sombra roja */
+}
+
+
+/* Botón de envío */
+
+.formulario-contacto .boton-primario {
+    width: 100%;
+    /* El botón ocupa todo el ancho */
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
